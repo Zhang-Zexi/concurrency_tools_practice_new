@@ -5,11 +5,12 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 /**
- * 描述：     演示Semaphore用法
+ * 描述：演示信号量Semaphore用法
  */
 public class SemaphoreDemo {
 
-    static Semaphore semaphore = new Semaphore(5, true);
+//    static Semaphore semaphore = new Semaphore(5, true);
+    static Semaphore semaphore = new Semaphore(3, true);
 
     public static void main(String[] args) {
         ExecutorService service = Executors.newFixedThreadPool(50);
@@ -24,6 +25,7 @@ public class SemaphoreDemo {
         @Override
         public void run() {
             try {
+//                semaphore.acquire();
                 semaphore.acquire(3);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -35,7 +37,9 @@ public class SemaphoreDemo {
                 e.printStackTrace();
             }
             System.out.println(Thread.currentThread().getName() + "释放了许可证");
-            semaphore.release(2);
+//            semaphore.release(2);
+//            semaphore.release();
+            semaphore.release(3);
         }
     }
 }
