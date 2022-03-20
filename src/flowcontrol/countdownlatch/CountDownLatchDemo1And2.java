@@ -41,5 +41,6 @@ public class CountDownLatchDemo1And2 {
 
         end.await();
         System.out.println("所有人到达终点，比赛结束");
+        // CountDownLatch是不能重用的，如果需要重新计数，可以考虑CycliBarrier或者重新创建CountDownLatch实例
     }
 }
