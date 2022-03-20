@@ -3,7 +3,7 @@ package aqs;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 
 /**
- * 描述：     自己用AQS实现一个简单的线程协作器
+ * 描述：自己用AQS实现一个简单的线程协作器
  */
 public class OneShotLatch {
 
