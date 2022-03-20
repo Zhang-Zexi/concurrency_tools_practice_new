@@ -4,7 +4,7 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 /**
- * 描述：    演示CyclicBarrier
+ * 描述：演示CyclicBarrier
  */
 public class CyclicBarrierDemo {
     public static void main(String[] args) {
