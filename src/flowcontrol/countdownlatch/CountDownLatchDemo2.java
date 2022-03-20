@@ -20,6 +20,7 @@ public class CountDownLatchDemo2 {
                     System.out.println("No." + no + "准备完毕，等待发令枪");
                     try {
                         begin.await();
+//                        Thread.sleep(1000);
                         System.out.println("No." + no + "开始跑步了");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -29,8 +30,8 @@ public class CountDownLatchDemo2 {
             service.submit(runnable);
         }
         //裁判员检查发令枪...
-        Thread.sleep(5000);
-        System.out.println("发令枪响，比赛开始！");
+//        Thread.sleep(5000);
+//        System.out.println("发令枪响，比赛开始！");
         begin.countDown();
     }
 }
